@@ -1,18 +1,16 @@
 package com.example.taskManager.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class TaskDto {
-    Long id;
+@NoArgsConstructor
+public class CreateTaskDto {
     String name;
     String description;
-    boolean done;
     LocalDate dueDate;
 }
