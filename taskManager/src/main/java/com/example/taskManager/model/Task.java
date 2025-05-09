@@ -4,16 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.lang.NonNull;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class tasks {
+@Getter
+@Setter
+public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,4 +26,8 @@ public class tasks {
     private String description;
 
     private boolean done;
+
+    public boolean getDone() {
+        return done;
+    }
 }
